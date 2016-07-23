@@ -10,11 +10,11 @@ import elixir from 'laravel-elixir';
 // - Don't use this as a way to make the rest of the gulpfile project independent (thereby making
 // the gulp more complex). It is fine and far easier to edit the gulp for lots of things
 
-const assetSrc = elixir.config.assetsPath;
-const phpSrc = elixir.config.appPath;
+const assets = elixir.config.assetsPath;
+const app = elixir.config.appPath;
 const dest = elixir.config.publicPath;
 
-const config = { assetSrc, phpSrc, dest };
+const config = { assets, app, dest };
 
 config.styles = {
   src: ['main.scss'],
@@ -30,7 +30,7 @@ config.styles = {
 };
 
 config.scripts = {
-  baseDir: `${assetSrc}/scripts/`,
+  baseDir: `${assets}/scripts/`,
   src: ['main.js'],
   dest: `${dest}/scripts/main.js`,
 };
@@ -43,7 +43,7 @@ config.browserSync = {
 
 config.scssLint = {
   src: [
-    `${assetSrc}/styles/**/*.scss`,
+    `${assets}/styles/**/*.scss`,
   ],
   options: {
     config: path.join(__dirname, '../.scss-lint.yml'),
@@ -51,18 +51,26 @@ config.scssLint = {
 };
 
 config.eslint = {
-  src: [`${assetSrc}/scripts/**/*.js`, 'gulpfile.babel.js/**/*.js'],
+  src: [`${assets}/scripts/**/*.js`, 'gulpfile.babel.js/**/*.js'],
 };
 
 config.phplint = {
-  src: [`${phpSrc}/**/*.php`],
+  src: [
+    '**/*.php',
+    '!vendor/**/*.php',
+  ],
   options: {
     skipPassedFiles: true,
   },
 };
 
 config.phpcs = {
-  src: [`${phpSrc}/**/*.php`],
+  src: [
+    `${app}/**/*.php`,
+    'config/**/*.php',
+    'bootstrap/**/*.php',
+    '!bootstrap/cache/services.php',
+  ],
   options: {
     bin: './vendor/bin/phpcs',
     standard: 'PSR2',
