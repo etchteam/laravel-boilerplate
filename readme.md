@@ -97,7 +97,7 @@ Example commit messages:
 
 ## Extending
 
-## Adding Composer packages
+### Adding Composer packages
 
 - Plugins should be installed and updated via Composer
 - e.g. to install sentry this is done via `composer require sentry/sentry-laravel` ran from the root
