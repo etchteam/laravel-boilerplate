@@ -25,7 +25,7 @@ config.styles = {
   },
   sass: {
     folder: 'styles',
-    includePaths: 'node_modules',
+    includePaths: ['node_modules', 'resources/components'],
   },
 };
 
