@@ -1,0 +1,23 @@
+table {
+  border-collapse: if(true, collapse, separate);
+  margin: $spacing-vertical-sm 0;
+  table-layout: if(true, fixed, auto);
+  width: 100%;
+}
+
+th {
+  font-weight: 600;
+  padding: $spacing-vertical-sm 0;
+  text-align: left;
+}
+
+td {
+  border-bottom: $border;
+  padding: $spacing-vertical-sm 0;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}

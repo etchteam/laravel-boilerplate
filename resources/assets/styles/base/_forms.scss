@@ -1,0 +1,67 @@
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: $spacing-vertical-xs;
+  padding: 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: $spacing-vertical-xs;
+}
+
+input,
+select,
+textarea {
+  appearance: none;
+  background-color: $input-bg;
+  border: $border;
+  border-radius: $border-radius;
+  box-shadow: $input-box-shadow;
+  color: $input-color;
+  display: block;
+  margin-bottom: $spacing-vertical;
+  padding: $spacing-vertical-xs $spacing-horizontal-xs;
+  text-overflow: ellipsis;
+  transition: border-color $transition-timing $transition-duration;
+  width: 100%;
+
+  &:hover {
+    border-color: $input-border-color-hover;
+  }
+
+  &:focus {
+    border-color: $input-border-color-focus;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $input-bg-disabled;
+    cursor: not-allowed;
+
+    &:hover {
+      border: $border;
+    }
+  }
+
+  &::placeholder {
+    color: $input-color-placeholder;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  display: inline;
+  margin-right: $spacing-horizontal-xs;
+}
