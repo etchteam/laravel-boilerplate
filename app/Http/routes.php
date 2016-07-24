@@ -12,3 +12,7 @@
 */
 
 Route::get('/', ['uses' => 'DefaultController@index', 'as' => 'default.index']);
+
+if (App::environment('local')) {
+    Route::get('/styleguide', ['uses' => 'StyleguideController@index', 'as' => 'styleguide.index']);
+}
