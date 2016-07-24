@@ -49,7 +49,7 @@ p {
 a {
   color: $link-color;
   text-decoration: $link-decoration;
-  transition: color $transition-duration $transition-timing;
+  transition: all $transition-duration $transition-timing;
 
   &:hover {
     color: $link-hover-color;
