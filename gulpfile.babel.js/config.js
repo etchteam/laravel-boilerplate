@@ -35,6 +35,11 @@ config.scripts = {
   dest: `${dest}/scripts/main.js`,
 };
 
+config.images = {
+  src: ['resources/images', 'resources/components/**/*.{jpg,png,gif,svg}'],
+  dest: 'public/images',
+};
+
 config.browserSync = {
   port: 9000,
   proxy: 'boilerplate.app',
