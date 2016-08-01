@@ -70,6 +70,18 @@ return [
             'schema' => 'public',
         ],
 
+        'pgsql_remote' => [
+            'driver' => 'pgsql',
+            'host' => env('DB_HOST', 'localhost'),
+            'port' => env('DB_PORT', '54320'),
+            'database' => env('DB_DATABASE', 'boilerplate'),
+            'username' => env('DB_USERNAME', 'homestead'),
+            'password' => env('DB_PASSWORD', 'secret'),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+        ],
+
     ],
 
     /*

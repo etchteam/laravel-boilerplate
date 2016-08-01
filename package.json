@@ -36,8 +36,8 @@
     "ghooks": {
       "pre-commit": "npm run lint",
       "commit-msg": "validate-commit-msg",
-      "post-merge": "npm install && composer install && bundle install && php artisan migrate",
-      "post-rewrite": "npm install && composer install && bundle install && php artisan migrate",
+      "post-merge": "npm install && composer install && bundle install && php artisan migrate --database=pgsql_remote",
+      "post-rewrite": "npm install && composer install && bundle install && php artisan migrate --database=pgsql_remote",
       "pre-push": "php artisan migrate --database=pgsql_test && phpunit --stop-on-failure"
     }
   }
