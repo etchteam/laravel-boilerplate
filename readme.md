@@ -15,7 +15,7 @@ client side dependencies, [Browserify](http://browserify.org/) for gluing the JS
 ### Install Dependencies
 
 - run `composer install`
-- run `rvm use ${cat .ruby-version} --install` (assuming you use [rvm](https://rvm.io/))
+- run `rvm use $(cat .ruby-version) --install` (assuming you use [rvm](https://rvm.io/))
 - run `bundle install`
 - run `npm install`
 
