@@ -34,7 +34,7 @@ Either remove the `SENTRY_DSN` entry from your `.env` file, or change it to your
 
 ### Run the site
 
-- Update the config in `/gulpfile.babel.js/config.js` with your vhost url in `config.borwserSync`
+- Update the config in `/gulpfile.babel.js/config.js` with your vhost url in `config.browserSync`
 - run `npm run serve` to fire up the site with Browser Sync
 
 ## Linting
