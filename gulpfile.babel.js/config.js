@@ -1,5 +1,6 @@
 import path from 'path';
 import elixir from 'laravel-elixir';
+import glob from 'node-sass-globbing';
 
 // The purpose of this file is to provide easy access to the key config aspects of this gulp file.
 // It is intended to only deal with simple modifications, and is not meant to make the rest of
@@ -25,7 +26,12 @@ config.styles = {
   },
   sass: {
     folder: 'styles',
-    includePaths: ['node_modules', 'resources/components'],
+    includePaths: ['node_modules'],
+    pluginOptions: {
+      outputStyle: elixir.inProduction ? 'compressed' : 'nested',
+      precision: 10,
+      importer: [glob],
+    },
   },
 };
 
