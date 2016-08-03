@@ -58,6 +58,11 @@ config.images = {
   dest: 'public/images',
 };
 
+config.fonts = {
+  src: ['resources/assets/fonts'],
+  dest: 'public/fonts',
+};
+
 config.browserSync = {
   port: 9000,
   proxy: 'boilerplate.app',

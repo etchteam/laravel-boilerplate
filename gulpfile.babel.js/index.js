@@ -22,7 +22,8 @@ elixir((mix) => {
   mix.browserify(config.scripts.src, config.scripts.dest, config.scripts.baseDir)
   .sass(config.styles.src, config.styles.dest)
   .copy(config.images.src, config.images.dest)
-  .version([config.styles.dest, config.scripts.dest, config.images.dest]);
+  .copy(config.fonts.src, config.fonts.dest)
+  .version([config.styles.dest, config.scripts.dest, config.images.dest, config.fonts.dest]);
 
   if (!elixir.config.production) {
     mix.sass(config.styleguide.styles.src, config.styleguide.styles.dest)
