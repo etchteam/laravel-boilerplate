@@ -54,7 +54,7 @@ config.scripts = {
 };
 
 config.images = {
-  src: ['resources/images', 'resources/components/**/*.{jpg,png,gif,svg}'],
+  src: ['resources/assets/images', 'resources/components/**/*.{jpg,png,gif,svg}'],
   dest: 'public/images',
 };
 
