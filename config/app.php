@@ -175,6 +175,7 @@ return [
         Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Laracasts\Generators\GeneratorsServiceProvider::class,
 
     ],
 
