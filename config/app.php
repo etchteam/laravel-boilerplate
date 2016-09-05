@@ -168,6 +168,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\CustomValidatorServiceProvider::class,
 
         /*
          * Third Party Service Providers...
