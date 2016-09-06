@@ -7,7 +7,12 @@
   "scripts": {
     "build": "gulp --production",
     "serve": "gulp && gulp watch",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "precommit": "npm run lint",
+    "commitmsg": "validate-commit-msg",
+    "postmerge": "npm install && composer install && bundle install && php artisan migrate --database=pgsql_remote",
+    "postrewrite": "npm install && composer install && bundle install && php artisan migrate --database=pgsql_remote",
+    "prepush": "php artisan migrate --database=pgsql_test && vendor/phpunit/phpunit/phpunit --stop-on-failure"
   },
   "devDependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
@@ -16,13 +21,13 @@
     "eslint-plugin-import": "^1.9.2",
     "eslint-plugin-jsx-a11y": "^1.5.3",
     "eslint-plugin-react": "^5.0.1",
-    "ghooks": "^1.3.2",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-phpcs": "^1.1.1",
     "gulp-phplint": "^0.1.0",
     "gulp-scss-lint": "^0.4.0",
     "highlight.js": "^9.5.0",
+    "husky": "^0.11.7",
     "laravel-elixir": "^6.0.0-9",
     "laravel-elixir-browserify-official": "^0.1.3",
     "laravel-elixir-browsersync-official": "^1.0.0",
@@ -32,14 +37,5 @@
   },
   "engines": {
     "node": ">=6.3.0"
-  },
-  "config": {
-    "ghooks": {
-      "pre-commit": "npm run lint",
-      "commit-msg": "validate-commit-msg",
-      "post-merge": "npm install && composer install && bundle install && php artisan migrate --database=pgsql_remote",
-      "post-rewrite": "npm install && composer install && bundle install && php artisan migrate --database=pgsql_remote",
-      "pre-push": "php artisan migrate --database=pgsql_test && vendor/phpunit/phpunit/phpunit --stop-on-failure"
-    }
   }
 }
