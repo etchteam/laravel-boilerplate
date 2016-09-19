@@ -8,11 +8,11 @@
     "build": "gulp --production",
     "serve": "gulp && gulp watch",
     "lint": "gulp lint",
-    "precommit": "npm run lint",
-    "commitmsg": "validate-commit-msg",
-    "postmerge": "npm install && composer install && bundle install && php artisan migrate --database=pgsql_remote",
-    "postrewrite": "npm install && composer install && bundle install && php artisan migrate --database=pgsql_remote",
-    "prepush": "php artisan migrate --database=pgsql_test && vendor/phpunit/phpunit/phpunit --stop-on-failure"
+    "precommit": "./config/hooks/precommit.sh",
+    "commitmsg": "./config/hooks/commitmsg.sh",
+    "postmerge": "./config/hooks/postmerge-postrewrite.sh",
+    "postrewrite": "./config/hooks/postmerge-postrewrite.sh",
+    "prepush": "./config/hooks/prepush.sh"
   },
   "devDependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
