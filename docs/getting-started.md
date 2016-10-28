@@ -10,7 +10,7 @@
 - run `composer install`
 - run `rvm use $(cat .ruby-version) --install` (assuming you use [rvm](https://rvm.io/))
 - run `bundle install`
-- run `npm install`
+- run `yarn install`
 
 ## Configure Installation
 
@@ -28,4 +28,4 @@ Either remove the `SENTRY_DSN` entry from your `.env` file, or change it to your
 ## Run the site
 
 - Update the config in `/gulpfile.babel.js/config.js` with your vhost url in `config.browserSync`
-- run `npm run serve` to fire up the site with Browser Sync
+- run `yarn run serve` to fire up the site with Browser Sync
