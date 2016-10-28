@@ -15,17 +15,6 @@ class DefaultController extends Controller
      */
     public function index()
     {
-        return view('default.index', [
-            'components' => [
-                [
-                    'name'  => 'example/example',
-                    'data'  => $this->toObject([
-                        'title'     => 'Example Component',
-                        'image_url' => 'images/example/images/example.png',
-                        'content'   => ''
-                    ])
-                ]
-            ]
-        ]);
+        return view('default.index', ['components' => []]);
     }
 }
