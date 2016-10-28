@@ -174,9 +174,7 @@ return [
          * Third Party Service Providers...
          */
         Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        Laracasts\Generators\GeneratorsServiceProvider::class,
 
     ],
 
@@ -224,7 +222,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Sentry' => Sentry\SentryLaravel\SentryFacade::class,
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
 
