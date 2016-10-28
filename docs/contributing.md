@@ -2,12 +2,18 @@
 
 ## Git
 
-We use [git flow](https://github.com/nvie/gitflow) for repository management. If you haven't used
- git flow before, then please [read this handy article](http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/)
- to get a handle on things before starting.
+There are two main branches, `master` and `develop`.
 
-Master must **always be production ready**. Open pull requests to merge branches into master, and
- ensure they are reviewed by at least one developer.
+Master **must always be production ready**.
+
+Develop **must always be client ready**.
+
+Open pull requests to merge code into `master` or `develop`, and ensure they're reviewed by at least
+ one developer.
+
+Most work should be done in feature branches, branched off from `develop`, with the naming convention
+ of `feature/{my-amazing-feature}`. Any hot fixes should be branched off `master`, with the naming
+ convention `hot-fix/{oh-no-this-is-bad}`.
 
 ### Committing
 

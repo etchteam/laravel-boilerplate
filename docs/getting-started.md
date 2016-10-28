@@ -3,7 +3,6 @@
 ## Pre-requisites
 
 - [Laravel Homestead](https://laravel.com/docs/master/homestead)
-- [git flow](https://github.com/nvie/gitflow)
 
 ## Install Dependencies
 
