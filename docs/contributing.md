@@ -51,4 +51,4 @@ To seed, run `php artisan db:seed`.
 
 ### Build a new seed
 
-- See (the Laravel docs)[https://laravel.com/docs/5.2/seeding].
+- See (the Laravel docs)[https://laravel.com/docs/master/seeding].

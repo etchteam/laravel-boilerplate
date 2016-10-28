@@ -2,7 +2,7 @@
 
 ## Pre-requisites
 
-- [Laravel Homestead](https://laravel.com/docs/5.2/homestead)
+- [Laravel Homestead](https://laravel.com/docs/master/homestead)
 - [git flow](https://github.com/nvie/gitflow)
 
 ## Install Dependencies
@@ -14,8 +14,8 @@
 
 ## Configure Installation
 
-- Follow the [Homestead guide](https://laravel.com/docs/5.2/homestead#adding-additional-sites).
- Note that you'll also have to edit your hosts file, following [the "**The hosts file**" section](https://laravel.com/docs/5.2/homestead#configuring-homestead).
+- Follow the [Homestead guide](https://laravel.com/docs/master/homestead#adding-additional-sites).
+ Note that you'll also have to edit your hosts file, following [the "**The hosts file**" section](https://laravel.com/docs/master/homestead#configuring-homestead).
 
 Once homestead is setup, run the following (in order)
 
