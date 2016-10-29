@@ -25,7 +25,6 @@
     "gulp-eslint": "^3.0.1",
     "gulp-phpcs": "^1.1.1",
     "gulp-scss-lint": "^0.4.0",
-    "highlight.js": "^9.5.0",
     "husky": "^0.11.7",
     "laravel-elixir": "^6.0.0-9",
     "laravel-elixir-browserify-official": "^0.1.3",
