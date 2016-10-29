@@ -72,10 +72,11 @@ config.eslint = {
 
 config.phpcs = {
   src: [
-    `${app}/**/*.php`,
-    'config/**/*.php',
+    'app/**/*.php',
     'bootstrap/**/*.php',
-    '!bootstrap/cache/services.php',
+    'routes/**/*.php',
+    'tests/**/*.php',
+    '!bootstrap/cache/**/*.php',
   ],
   options: {
     bin: './vendor/bin/phpcs',
