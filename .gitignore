@@ -1,6 +1,7 @@
 /vendor
 /node_modules
+/coverage
+/commit_images
 Homestead.yaml
 Homestead.json
 .env
-commit_images
