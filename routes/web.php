@@ -11,4 +11,6 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', ['uses' => 'DefaultController@index', 'as' => 'default.index']);
