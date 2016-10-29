@@ -1,9 +1,9 @@
 import gulp from 'gulp';
+import elixir from 'laravel-elixir';
 import './tasks/eslint';
 import './tasks/scss-lint';
 import './tasks/php-cs';
 import config from './config';
-import elixir from 'laravel-elixir';
 
 // Extend the elixir autoprefix rules with our own
 Object.assign(elixir.config.css.autoprefix.options,
