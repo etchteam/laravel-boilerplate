@@ -35,18 +35,6 @@ config.styles = {
   },
 };
 
-config.styleguide = {
-  styles: {
-    src: ['styleguide.scss'],
-    dest: `${dest}/styles/styleguide.css`,
-  },
-  scripts: {
-    baseDir: `${assets}/scripts/`,
-    src: ['styleguide.js'],
-    dest: `${dest}/scripts/styleguide.js`,
-  },
-};
-
 config.scripts = {
   baseDir: `${assets}/scripts/`,
   src: ['main.js'],
