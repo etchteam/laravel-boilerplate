@@ -82,16 +82,6 @@ config.eslint = {
   src: [`${assets}/scripts/**/*.js`, 'gulpfile.babel.js/**/*.js'],
 };
 
-config.phplint = {
-  src: [
-    '**/*.php',
-    '!vendor/**/*.php',
-  ],
-  options: {
-    skipPassedFiles: true,
-  },
-};
-
 config.phpcs = {
   src: [
     `${app}/**/*.php`,
