@@ -1,8 +1,10 @@
 <?php
 
-namespace Tests\Http;
+namespace Tests\Http\Controllers;
 
-class DefaultControllerTest extends \Tests\TestCase
+use Tests\TestCase;
+
+class DefaultControllerTest extends TestCase
 {
     /**
      * @test
