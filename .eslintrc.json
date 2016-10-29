@@ -13,6 +13,7 @@
     }
   },
   "rules": {
-    "arrow-body-style": [2, "always"]
+    "arrow-body-style": [2, "always"],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   }
 }
