@@ -26,8 +26,6 @@
 phpenv global ${cat .php-version}
 npm rebuild node-sass
 npm install --no-spin
-rvm use $(cat .ruby-version) --install
-bundle install
 composer config -g github-oauth.github.com $GITHUB_ACCESS_TOKEN
 composer install --no-interaction --prefer-source --no-dev
 ```

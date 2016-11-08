@@ -57,12 +57,12 @@ config.browserSync = {
   notify: false,
 };
 
-config.scssLint = {
+config.sassLint = {
   src: [
     `${assets}/styles/**/*.scss`,
   ],
   options: {
-    config: path.join(__dirname, '../.scss-lint.yml'),
+    configFile: path.join(__dirname, '../.sass-lint.yml'),
   },
 };
 
