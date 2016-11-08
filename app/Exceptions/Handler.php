@@ -33,7 +33,10 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $e)
     {
-        app('sentry')->captureException($e);
+        if (app('sentry')) {
+            app('sentry')->captureException($e);
+        }
+
         parent::report($e);
     }
 
