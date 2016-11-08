@@ -7,7 +7,6 @@
     "es6": true
   },
   "parserOptions": {
-    "ecmaVersion": 6,
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true
     }
