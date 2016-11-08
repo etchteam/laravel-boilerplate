@@ -33,7 +33,7 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $e)
     {
-        if (app('sentry')) {
+        if (class_exists('sentry')) {
             app('sentry')->captureException($e);
         }
 
