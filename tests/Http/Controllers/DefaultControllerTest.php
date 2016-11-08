@@ -18,10 +18,10 @@ class DefaultControllerTest extends TestCase
     /**
      * @test
      */
-     public function indexReturns200WhenAuthenticated()
-     {
+    public function indexReturns200WhenAuthenticated()
+    {
         $this->setAuthenticatedSession();
         $this->call('GET', route('default.index'));
         $this->assertResponseOk();
-     }
+    }
 }
