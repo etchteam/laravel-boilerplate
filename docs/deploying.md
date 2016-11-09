@@ -27,15 +27,15 @@ phpenv global ${cat .php-version}
 npm rebuild node-sass
 npm install --no-spin
 composer config -g github-oauth.github.com $GITHUB_ACCESS_TOKEN
-composer install --no-interaction --prefer-source --no-dev
+composer install --no-interaction --prefer-source
+yarn run build
 ```
 
 ### Test commands
 
 ```
-npm run build
-npm run lint
-npm run test
+yarn run lint
+yarn run test
 phpunit -d memory_limit=536M --stop-on-failure
 ```
 
