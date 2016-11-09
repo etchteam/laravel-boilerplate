@@ -26,6 +26,7 @@ phpenv global $(cat .php-version)
 npm rebuild node-sass
 npm install --no-spin
 composer install --no-interaction
+composer global require "laravel/envoy=~1.0" --no-interaction
 yarn run build
 ```
 
@@ -39,10 +40,9 @@ phpunit -d memory_limit=536M --stop-on-failure
 ### Deployments
 
 - Set up a deploy path for `develop`
-- Select the capistrano option
-- Set the recipe name to `staging deploy`
-
+- Select the custom script option
+- Enter `envoy run deploy --server=staging`
 
 - Set up a deploy path for `master`
-- Select the capistrano option
-- Set the recipe name to `production deploy`
+- Select the custom script option
+- Enter `envoy run deploy --server=production`
