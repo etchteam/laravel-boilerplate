@@ -1,5 +1,7 @@
 # Etch Laravel Boilerplate
 
+[ ![Codeship Status for etchteam/laravel-boilerplate](https://app.codeship.com/projects/ef55f8e0-88d5-0134-c2fc-4a60797e4d29/status?branch=develop)](https://app.codeship.com/projects/184065)
+
 ## Introduction
 
 This is Etch's Laravel Boilerplate build.
