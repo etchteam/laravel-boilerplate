@@ -11,23 +11,21 @@
 
 ### Environment variables
 
-- Set `GITHUB_ACCESS_TOKEN` to be your [Github cli access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/)
 - Set `APP_URL` to `localhost`
-- Set `APP_KEY` to `MEemBSwgjnAzsotOKL4lFfg8whpFi9pd`
-- Set `APP_DEBUG` to `true`
-- Set `APP_ENV` to `local`
+- Set `APP_KEY` to a strong enough key (run `php artisan key:generate` locally and use that)
+- Set `APP_ENV` to `testing`
 - Set `TESTDB_DATABASE` to `test`
 - Set `TESTDB_USERNAME` to `postgres`
 - Set `TESTDB_PASSWORD` to `test`
+- Set `TESTDB_PORT` to `5432`
 
 ### Setup commands
 
 ```
-phpenv global ${cat .php-version}
+phpenv global $(cat .php-version)
 npm rebuild node-sass
 npm install --no-spin
-composer config -g github-oauth.github.com $GITHUB_ACCESS_TOKEN
-composer install --no-interaction --prefer-source
+composer install --no-interaction
 yarn run build
 ```
 
@@ -35,7 +33,6 @@ yarn run build
 
 ```
 yarn run lint
-yarn run test
 phpunit -d memory_limit=536M --stop-on-failure
 ```
 
