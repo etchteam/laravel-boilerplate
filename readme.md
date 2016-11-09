@@ -1,8 +1,8 @@
-# Red Bullet Laravel Boilerplate
+# Etch Laravel Boilerplate
 
 ## Introduction
 
-This is Red Bullet's Laravel Boilerplate build.
+This is Etch's Laravel Boilerplate build.
 
 It uses [Composer](https://getcomposer.org/) for PHP Dependencies, [NPM](https://www.npmjs.com/) for
 client side dependencies, [Browserify](http://browserify.org/) for gluing the JS together and [Sass](http://sass-lang.com/) for styling.

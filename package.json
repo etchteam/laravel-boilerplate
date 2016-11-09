@@ -2,7 +2,7 @@
   "name": "laravel-boilerplate",
   "version": "1.0.0",
   "private": true,
-  "author": "Red Bullet",
+  "author": "Etch Software Ltd",
   "license": "ISC",
   "scripts": {
     "build": "gulp --production",
