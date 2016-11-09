@@ -1,8 +1,8 @@
 # Deployments
 
 - Deployments run automatically by codeship when deployments are made.
-- Pushing to develop deploys to staging
-- Pushing to master deploys to production
+- Pushing to `develop` deploys to staging
+- Pushing to `master` deploys to production
 - To get codeship to fire the production build you need to update your .git/config file to have:
    [branch "master"]
        mergeoptions = --no-ff
