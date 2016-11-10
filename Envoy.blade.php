@@ -1,19 +1,25 @@
 @setup
     function env(string $key) {
-      $dotenv = file_get_contents('.env');
-      $rows   = explode("\n", $dotenv);
+      if (file_exists('.env')) {
+        $dotenv = file_get_contents('.env');
+        $rows   = explode("\n", $dotenv);
 
-      $search = array_filter($rows, function ($row) use ($key) {
-          if (strstr($row, $key)) {
-              return $row;
-          }
-      });
+        $search = array_filter($rows, function ($row) use ($key) {
+            if (strstr($row, $key)) {
+                return $row;
+            }
+        });
 
-      $variable = reset($search);
-      $segments = explode('=', $variable);
-      $value = end($segments);
+        $variable = reset($search);
+        $segments = explode('=', $variable);
+        $value = end($segments);
 
-      return $value;
+        if ($value) {
+          return $value;
+        }
+      }
+
+      return getenv($key);
     }
 
     $server = isset($server) ? $server : 'staging';
