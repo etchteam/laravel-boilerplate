@@ -1,6 +1,8 @@
 # Etch Laravel Boilerplate
 
 [ ![Codeship Status for etchteam/laravel-boilerplate](https://app.codeship.com/projects/ef55f8e0-88d5-0134-c2fc-4a60797e4d29/status?branch=develop)](https://app.codeship.com/projects/184065)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/63afe3d050c34afbb80154d33065a942)](https://www.codacy.com/app/etch/laravel-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=etchteam/laravel-boilerplate&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/63afe3d050c34afbb80154d33065a942)](https://www.codacy.com/app/etch/laravel-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=etchteam/laravel-boilerplate&amp;utm_campaign=Badge_Coverage)
 
 ## Introduction
 
