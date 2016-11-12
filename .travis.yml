@@ -1,0 +1,31 @@
+git:
+  depth: 3
+
+language: php
+
+php:
+  - '7.0'
+
+language: node_js
+
+node_js:
+  - '6.3.0'
+
+services:
+  - postgresql
+
+install:
+  - composer install --no-interaction
+  - composer global require "laravel/envoy=~1.0"
+  - npm rebuild node-sass
+  - npm install --no-spin
+
+before_script:
+  - psql -c 'create database test;' -U postgres
+  - yarn run build
+  - php artisan migrate --database=pgsql_test
+
+script:
+  - yarn run lint
+  - phpunit -d memory_limit=536M --stop-on-failure --coverage-xml build/coverage-xml
+  - php vendor/bin/codacycoverage phpunit
