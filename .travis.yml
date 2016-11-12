@@ -6,19 +6,15 @@ language: php
 php:
   - '7.0'
 
-language: node_js
-
-node_js:
-  - '6.3.0'
-
 services:
   - postgresql
 
 install:
   - composer install --no-interaction
   - composer global require "laravel/envoy=~1.0"
-  - npm rebuild node-sass
+  - nvm use 6.3.0
   - npm install --no-spin
+  - npm rebuild node-sass
 
 before_script:
   - psql -c 'create database test;' -U postgres
