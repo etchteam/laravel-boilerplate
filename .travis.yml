@@ -26,3 +26,7 @@ script:
   - yarn run lint
   - phpunit -d memory_limit=536M --stop-on-failure --coverage-xml build/coverage-xml
   - php vendor/bin/codacycoverage phpunit
+
+notifications:
+  slack:
+    secure: Y0lVsy9N7mTBViUW2AQLOPXPIQ5vTke8m5j/VvZ+e/nrV+4prCU3pa6Z3AtN/IJtlt1j2BHk0e0GTyLVSnAoitdAA5765EA06Z5TQnho9+/SvcBP/HY0U/WUmDKGVNiY0CmChj1OZUGYUCDe0R+WBPgAvY4YLYLl/OpakKswtdUxVto+VB+leRimIfMyAN1FFyJHDYa/C+ILQJZqVMIPL1mnugn+zM98R5Jc2NrG/p0kxaCkCH8mj/O3RVnKOkHHQkShEUo2chptYtlkeRv3JaDSrB4HpvnsbHtvPG+9SphLOBMC2Yo7iKj+EeBMpBFW7hK+4WN8ibe8BgB76s8fujm7mK54XXIKCxFGg7gxsfFDxEcochVI0rmxLfaXzt0MFF/XSUiRfZmAIgR1Z7XpS8PoJpstnbqsUPgzWtO+iM1blC5GgicEpGjOesUvZTSZFBzLS8S+TgnS4IQhfASvtv0nsNKKFRM+Ll8QgvSXqmzJnx/XrG84BOrsx8JGIf4X/8dJiyK7pMpPveQNkMN7q8Yz6okM3aBXoFe/g2QxG0SNjg8PI6O6fAOatk5VgcOwCSQqnzvaqrCXXmtPJQWyTAlDY4chyBbTxMzthMIHon85Ay6QC4uTnzz7ulksADMKZ5DjhnUK10jRxQObk9k5Mi2erQOEnQKMRDoYxH8Ay6c=
