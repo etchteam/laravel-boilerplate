@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import elixir from 'laravel-elixir';
+import runSequence from 'run-sequence';
 import './tasks/eslint';
 import './tasks/sass-lint';
 import './tasks/php-cs';
@@ -29,4 +30,8 @@ elixir((mix) => {
   }
 });
 
-gulp.task('lint', ['eslint', 'sass-lint', 'php-cs']);
+gulp.task('lint', (done) => {
+  runSequence('eslint', 'scss-lint', 'php-cs', () => {
+    done();
+  });
+});
