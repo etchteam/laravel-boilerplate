@@ -31,7 +31,7 @@ elixir((mix) => {
 });
 
 gulp.task('lint', (done) => {
-  runSequence('eslint', 'scss-lint', 'php-cs', () => {
+  runSequence('eslint', 'sass-lint', 'php-cs', () => {
     done();
   });
 });
