@@ -1,48 +1,28 @@
 # Deployments
 
-- Deployments run automatically by codeship when deployments are made.
+- Deployments are run automatically by travis on git push
 - Pushing to `develop` deploys to staging
 - Pushing to `master` deploys to production
-- To get codeship to fire the production build you need to update your .git/config file to have:
-   [branch "master"]
-       mergeoptions = --no-ff
 
-## Setting up Codeship
+## Environment variables
 
-### Environment variables
-
-- Set `APP_URL` to `localhost`
-- Set `APP_KEY` to a strong enough key (run `php artisan key:generate` locally and use that)
-- Set `APP_ENV` to `testing`
-- Set `TESTDB_DATABASE` to `test`
-- Set `TESTDB_USERNAME` to `postgres`
-- Set `TESTDB_PASSWORD` to `test`
-- Set `TESTDB_PORT` to `5432`
-
-### Setup commands
+You'll need to supply the following environment variables, with appropriate values:
 
 ```
-phpenv global $(cat .php-version)
-npm rebuild node-sass
-npm install --no-spin
-composer install --no-interaction
-composer global require "laravel/envoy=~1.0" --no-interaction
-yarn run build
+GIT_REPO=https://github.com/etchteam/laravel-boilerplate.git
+
+STAGING_SSH=null
+STAGING_PATH=null
+STAGING_BRANCH=develop
+STAGING_USER=null
+
+PRODUCTION_SSH=null
+PRODUCTION_PATH=null
+PRODUCTION_BRANCH=master
+PRODUCTION_USER=null
 ```
 
-### Test commands
+## Manual deploys
 
-```
-yarn run lint
-phpunit -d memory_limit=536M --stop-on-failure
-```
-
-### Deployments
-
-- Set up a deploy path for `develop`
-- Select the custom script option
-- Enter `envoy run deploy --server=staging`
-
-- Set up a deploy path for `master`
-- Select the custom script option
-- Enter `envoy run deploy --server=production`
+Assuming you have ssh access to the correct servers, you should be able to deploy to staging with
+ `envoy run deploy`, and to production with `envoy run deploy --server=production`
