@@ -18,12 +18,11 @@
 Once homestead is setup, run the following (in order)
 
 - `cp .env.example .env`
-- `chmod +x artisan`
 - `./artisan key:generate`
 
 Either remove the `SENTRY_DSN` entry from your `.env` file, or change it to your development dsn.
 
 ## Run the site
 
-- Update the config in `/gulpfile.babel.js/config.js` with your vhost url in `config.browserSync`
-- run `yarn run serve` to fire up the site with Browser Sync
+- Update the config in `/gulpfile.babel.js/config.js` with your homestead url in `config.browserSync`
+- run `yarn run serve` to fire up the site with BrowserSync

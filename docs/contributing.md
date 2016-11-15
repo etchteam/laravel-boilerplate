@@ -17,7 +17,7 @@ Most work should be done in feature branches, branched off from `develop`, with 
 
 ### Committing
 
-`npm run lint` is run in a pre-commit hook, and if it fails, your code will not be committed.
+`yarn run lint` is run in a pre-commit hook, and if it fails, your code will not be committed.
 
 Commit messages are validated using [validate-commit-msg](https://github.com/kentcdodds/validate-commit-msg).
 
@@ -53,7 +53,7 @@ These should be installed with the --save-dev flag
 
 ## Seeding
 
-To seed, run `php artisan db:seed`.
+To seed, run `./artisan db:seed`.
 
 ### Build a new seed
 
