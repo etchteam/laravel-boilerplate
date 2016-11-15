@@ -16,7 +16,7 @@ install:
   - nvm use 6.3.0
   - npm install -g yarn
   - yarn
-  - yarn rebuild node-sass
+  - npm rebuild node-sass
 
 before_script:
   - psql -c 'create database test;' -U postgres
