@@ -21,7 +21,8 @@
         "laracasts/generators": "^1.1",
         "squizlabs/php_codesniffer": "*",
         "laravel/envoy": "^1.3",
-        "codacy/coverage": "dev-master"
+        "codacy/coverage": "dev-master",
+        "sensiolabs/security-checker": "^4.0"
     },
     "autoload": {
         "classmap": [

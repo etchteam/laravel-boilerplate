@@ -24,6 +24,7 @@ before_script:
 
 script:
   - yarn run lint
+  - php vendor/sensiolabs/security-checker/security-checker security:check composer.lock
   - phpunit -d memory_limit=536M --stop-on-failure --coverage-xml build/coverage-xml
   - php vendor/bin/codacycoverage phpunit
 
