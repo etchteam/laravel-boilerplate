@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Validator;
 
 class CustomValidatorServiceProvider extends ServiceProvider
 {
@@ -14,7 +13,7 @@ class CustomValidatorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Validator::extend('case', function ($attribute, $value, $parameters) {
+        app('validator')->extend('case', function ($attribute, $value, $parameters) {
             switch ($parameters[0]) {
                 case 'uppercase':
                     return preg_match('/[A-Z]/', $value) && !preg_match('/[a-z]/', $value);
@@ -31,13 +30,13 @@ class CustomValidatorServiceProvider extends ServiceProvider
             }
         });
 
-        Validator::extend('numbers', function ($attribute, $value, $parameters) {
+        app('validator')->extend('numbers', function ($attribute, $value, $parameters) {
             $n = empty($parameters) ? 1 : $parameters[0];
             preg_match_all('/[\d]{1}/', $value, $matches);
             return (count($matches[0]) >= $n);
         });
 
-        Validator::extend('letters', function ($attribute, $value, $parameters) {
+        app('validator')->extend('letters', function ($attribute, $value, $parameters) {
             $n = empty($parameters) ? 1 : $parameters[0];
             preg_match_all('/[A-z]{1}/', $value, $matches);
             return (count($matches[0]) >= $n);

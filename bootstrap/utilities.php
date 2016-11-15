@@ -14,10 +14,12 @@ function attributes()
 
     if (isset($arguments[1]) && is_string($arguments[1])) {
         return $factory->raw($arguments[0], [], $arguments[1]);
-    } elseif (isset($arguments[1]) && is_array($arguments[1])) {
+    }
+
+    if (isset($arguments[1]) && is_array($arguments[1])) {
         $attrs = $factory->raw($arguments[0], $arguments[1], isset($arguments[2]) ? $arguments[2] : 'default');
         return array_merge($attrs, $arguments[1]);
-    } else {
-        return $factory->raw($arguments[0]);
     }
+
+    return $factory->raw($arguments[0]);
 }
