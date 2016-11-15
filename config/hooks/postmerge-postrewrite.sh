@@ -1,3 +1,5 @@
+#!/bin/bash
+
 yarn install
 composer install
 bundle install
