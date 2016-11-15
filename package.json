@@ -38,6 +38,7 @@
     "node": ">=6.3.0"
   },
   "dependencies": {
+    "brand-variables": "^1.0.2",
     "run-sequence": "^1.2.2"
   }
 }
