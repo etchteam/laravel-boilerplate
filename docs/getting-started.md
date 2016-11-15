@@ -7,8 +7,7 @@
 ## Install Dependencies
 
 - run `composer install`
-- run `rvm use $(cat .ruby-version) --install` (assuming you use [rvm](https://rvm.io/))
-- run `bundle install`
+- run `npm install -g yarn` (assuming you don't have yarn installed already)
 - run `yarn install`
 
 ## Configure Installation
