@@ -8,7 +8,7 @@
 
 This is Etch's Laravel Boilerplate build.
 
-It uses [Composer](https://getcomposer.org/) for PHP Dependencies, [NPM](https://www.npmjs.com/) for
+It uses [Composer](https://getcomposer.org/) for PHP Dependencies, [Yarn](https://yarnpkg.com) for
 client side dependencies, [Browserify](http://browserify.org/) for gluing the JS together and [Sass](http://sass-lang.com/) for styling.
 
 ## Documentation
