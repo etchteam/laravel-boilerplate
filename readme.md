@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/etchteam/laravel-boilerplate.svg?branch=develop)](https://travis-ci.org/etchteam/laravel-boilerplate)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/63afe3d050c34afbb80154d33065a942)](https://www.codacy.com/app/etch/laravel-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=etchteam/laravel-boilerplate&amp;utm_campaign=Badge_Grade)
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/63afe3d050c34afbb80154d33065a942)](https://www.codacy.com/app/etch/laravel-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=etchteam/laravel-boilerplate&amp;utm_campaign=Badge_Coverage)
+[![Known Vulnerabilities](https://snyk.io/test/github/etchteam/laravel-boilerplate/badge.svg)](https://snyk.io/test/github/etchteam/laravel-boilerplate)
 
 ## Introduction
 
